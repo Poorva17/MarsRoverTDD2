@@ -21,4 +21,12 @@ public class MarsRoverTest {
 
         assertEquals("1 0 S", marsRover.getPosition());
     }
+
+    @Test
+    public void shouldMove() {
+        MarsRover marsRover = new MarsRover(1, 2, "N");
+        marsRover.move("LMLMLMLMM");
+
+        assertEquals("1 3 N", marsRover.getPosition());
+    }
 }
