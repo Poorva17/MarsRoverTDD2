@@ -10,10 +10,15 @@ public class MarsRoverTest {
 
     @Test
     public void shouldReturnMarsRoverInitialPosition() {
-
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         assertEquals("0 0 N", marsRover.getPosition());
     }
 
+    @Test
+    public void shouldReturnMarsRoverPositionIfAssignedTo10S() {
+        MarsRover marsRover = new MarsRover(1, 0, "S");
+
+        assertEquals("1 0 S", marsRover.getPosition());
+    }
 }
