@@ -1,7 +1,10 @@
 package com.marsrover;
 
+import java.io.IOException;
+
 public class EntryPoint {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
         MarsRover marsRover = new MarsRover(1, 2, "N");
         View view = new View();
         view.print("MarsRover Position:");
