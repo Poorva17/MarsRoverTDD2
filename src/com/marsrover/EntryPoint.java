@@ -18,5 +18,6 @@ public class EntryPoint {
         marsRover1.move("MMRMMRMRRM");
         view.print("MarsRover Position after instruction MMRMMRMRRM :");
         view.print(marsRover1.getPosition());
+
     }
 }

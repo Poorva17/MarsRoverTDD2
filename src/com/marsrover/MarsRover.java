@@ -74,4 +74,29 @@ public class MarsRover {
             }
         }
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        MarsRover marsRover = (MarsRover) o;
+
+        if (positionX != marsRover.positionX)
+            return false;
+        if (positionY != marsRover.positionY)
+            return false;
+        return direction.equals(marsRover.direction);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = positionX;
+        result = 31 * result + positionY;
+        result = 31 * result + direction.hashCode();
+        return result;
+    }
 }
