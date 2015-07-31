@@ -5,19 +5,13 @@ import java.io.IOException;
 public class EntryPoint {
     public static void main(String[] args) throws IOException {
 
-        MarsRover marsRover = new MarsRover(1, 2, "N");
         View view = new View();
-        view.print("MarsRover Position:");
+        Parser parser = new Parser();
+        MarsRover marsRover;
+        view.print("Enter Rover position");
+        marsRover = parser.parse(view.acceptInput());
+        view.print("Enter Instruction:");
+        marsRover.move(view.acceptInput());
         view.print(marsRover.getPosition());
-        marsRover.move("LMLMLMLMM");
-        view.print("MarsRover Position after instruction LMLMLMLMM:");
-        view.print(marsRover.getPosition());
-        MarsRover marsRover1 = new MarsRover(3, 3, "E");
-        view.print("MarsRover Position:");
-        view.print(marsRover1.getPosition());
-        marsRover1.move("MMRMMRMRRM");
-        view.print("MarsRover Position after instruction MMRMMRMRRM :");
-        view.print(marsRover1.getPosition());
-
     }
 }
